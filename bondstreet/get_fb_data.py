@@ -13,7 +13,8 @@
 # facebook graph API usage example : 
 
 # short lived token can be obtained from graph api explorer, long-lived through developer registration. 
-# IMPORTANT NOTE: short-lived token can get more detailed page information but long-lived can only get name and id... why ? ??? 
+# IMPORTANT NOTE: short-lived token can get more detailed page information but long-lived can only get name and id... (app token)
+# so use short-lived page access token instead. 
 # graph= x = graph.request('search?q=indikitch&type=place')
 # x is a dict w/ 2 keys, paging and data, 
 # data is a list of nodes w/ each store's information, including address (st #, zip, latitude, longitude, id) 
@@ -26,7 +27,8 @@ import numpy as np
 import pandas as pd
 import sys
 # mytoken = '1932258216801125|2DvQ5-S-U5RA_SHo-w9iMwI0P50'  # long-lived token, no page detail when graph.get_objects(id=...), switch to short-lived
-mytoken ='EAACEdEose0cBAPKswAgkZCBHD5qudIGyN3kgZBUuB5b3KZCHbp1tbMo8jKVOGDKM8G4BBgxbMReaSpcKYbLximGxnhKTBytcBwZCw62M04tPRbPNphGsANzdX2WlqoxZAw2Cel3nvTpjJipxfP9k9ZAXBboL2PGy5H0Ti0QfJzAwZDZD' 
+mytoken = 'EAACEdEose0cBAGo9uqZBad9aIicJHUC4GWfW0PM3cutxJaItZCPJGBnk8X2poEB1GQ9G2ZAVz2TugeYDCh2QMVQ08DMXeeSSKMHcs0gFTZA1Q09dIgQ7h8ZBmYzH8ZB2bWKfh3PQe7pwNub8v5l4U3KsgAfVwZAelS7usfwiAVgpgZDZD'
+
 # can be re-generated through dveloper explorer, with a different user
 # this expires within one day, how to generate long-lived token ?? 
 

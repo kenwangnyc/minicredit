@@ -13,15 +13,20 @@ import numpy as np
 import pandas as pd
 import sys
 
-# FB score
+# FB data 
 data_fb = pd.read_csv('output_fb.csv')
 
 stores = len(data_fb)
 median_likes = data_fb.likes.median()
 median_checkins = data_fb.checkins.median() 
 
-score_fb = 1.0 - 1.0 / np.sqrt( stores * median_checkins) - 1.0 / np.sqrt( stores * median_likes)
-print score _fb
+# Twitter data
+
+data_tw = pd.read_csv('output_tw.csv')
+tweetscount = len(data_tw)
+
+score = 1.0 - 1.0 / np.sqrt( stores * median_checkins) - 1.0 / np.sqrt( stores * median_likes) - (100. -tweetscount) / 100. 
+print score 
 
 
 

@@ -1,0 +1,19 @@
+this project is for demostrative purpose how to use public data source API to instantly assess SME credit
+
+the credit model is really a toy model, in reality it needs to be combined w/ other data sources such as tax or transaction data 
+
+the code here demostrate the flow 
+
+
+1) data retrieving modules (FB, twitter, etc) are called separately to retrieve data from respective sources and saved to a centralize location
+2) credit assessment, this is independent of data retrieving, which might use multiple sources (including purchased), output is a single score ranging from (0,1)
+
+example: 
+python get_fb_data.py "capital grill" output_fb.csv
+python get_tw_data.py "capital grill" output_tw.csv
+python make_credit.py
+
+
+author: ken wang
+date: 7/11/2016
+
